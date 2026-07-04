@@ -1,0 +1,108 @@
+.faq-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Floating FAQ Button */
+.faq-button {
+    background-color: #0056b3; /* Darker blue for better contrast */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.faq-button:hover {
+    background-color: #004099; /* Slightly darker on hover */
+    transform: scale(1.1); /* Subtle pop effect */
+}
+
+.faq-button:active {
+    background-color: #003377;
+    transform: scale(0.95);
+}
+
+/* FAQ Popup */
+.faq-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: #f9f9f9; /* Light gray background */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ddd;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* FAQ Header */
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+.faq-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #d9534f; /* Red on hover */
+}
+
+/* FAQ Body */
+.faq-body {
+    margin-top: 12px;
+    max-height: 250px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f9f9f9;
+}
+
+/* FAQ Questions */
+.faq-body p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 12px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 8px;
+    border-left: 4px solid #007bff; /* Blue accent */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth Scrolling */
+.faq-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.faq-body::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+.faq-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}

@@ -1,0 +1,227 @@
+/* Admin Panel Container */
+.admin-panel-container {
+  padding: 40px;
+  background: linear-gradient(135deg, #f0f4f7, #d9e2ec);
+  font-family: 'Arial', sans-serif;
+  color: #444;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Heading Styles */
+h2 {
+  font-size: 36px;
+  color: #2e3b4e;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  max-width: 1000px; /* Limit table width for better readability */
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  color: #555;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Actions Column (for buttons alignment) */
+table td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between buttons */
+}
+
+/* Button Styles (General) */
+table td button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect (excluding disabled buttons) */
+table td button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Disabled Button Styles */
+table td button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+/* Promote Button */
+.promote-button {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.promote-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Degrade Button */
+.degrade-button {
+  background-color: #fd7e14; /* Orange color for degrade action */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.degrade-button:hover:not(:disabled) {
+  background-color: #e06b00; /* Darker shade of orange for hover */
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #f44336;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.delete-button:hover:not(:disabled) {
+  background-color: #e53935;
+}
+
+/* Button Active and Focus States */
+.promote-button:active,
+.degrade-button:active,
+.delete-button:active {
+  transform: translateY(2px);
+}
+
+.promote-button:focus,
+.degrade-button:focus,
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
+}
+
+/* Loading Text Style */
+.loading-text {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Loading Spinner */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #666;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Card-like Structure for Each Table Row */
+table tbody tr {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table tbody tr:hover {
+  background-color: #ebf8f5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-panel-container {
+    padding: 20px;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  table td button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .loading-text {
+    font-size: 16px;
+  }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+  }
+}

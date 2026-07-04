@@ -1,0 +1,220 @@
+/* 🌟 Default Theme (Light Mode) */
+:root {
+    --bg-color: #e0e1dd;
+    --text-color: #0d1b2a;
+    --nav-bg: #778da9;
+    --primary: #415a77;
+    --secondary: #1b263b;
+    --hover-color: #546b8c;
+}
+
+/* 🌙 Dark Mode */
+.dark-mode {
+    --bg-color: #0d1b2a;
+    --text-color: #e0e1dd;
+    --nav-bg: #1b263b;
+    --primary: #415a77;
+    --secondary: #778da9;
+    --hover-color: #a0aec0;
+}
+
+/* 🌟 Apply Theme */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 🔹 Taskbar (Navbar) */
+.taskbar {
+    background: var(--nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.taskbar-logo h1 {
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+/* 🔹 Navigation Menu */
+.taskbar-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.taskbar-nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.taskbar-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.taskbar-nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* 🔹 Dark Mode Toggle */
+.dark-mode-toggle {
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--hover-color);
+}
+
+/* 🔹 Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-icon {
+    font-size: 20px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: var(--secondary);
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu li:hover {
+    background: var(--hover-color);
+}
+
+/* 🔹 Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .taskbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--nav-bg);
+        padding: 20px 0;
+    }
+
+    .taskbar-nav.open {
+        display: flex;
+    }
+
+    .taskbar-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+.notes-section {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .notes-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .note-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .note-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .note-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .note-content {
+    font-size: 1rem;
+    color: var(--text-color);
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .download-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .download-link:hover {
+    text-decoration: underline;
+  }
+  
+  .no-notes-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: gray;
+  }
+  
